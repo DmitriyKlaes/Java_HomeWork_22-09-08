@@ -1,5 +1,9 @@
 package ru.Geekbrains;
 
+/*
+Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее из этого списка.
+*/
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -16,7 +20,7 @@ public class Task001 {
             min = minNumber(min, list.get(i));
             sum += list.get(i);
         }
-        double averageNumber = average(sum, list);
+        double averageNumber = average(sum, list.size());
         System.out.println(list);
         System.out.printf("Максимальный элемент: %d\n", max);
         System.out.printf("Минимальный элемент: %d\n", min);
@@ -30,7 +34,7 @@ public class Task001 {
         if (min > number) min = number;
         return min;
     }
-    static Double average(double summ, ArrayList list) {
-        return summ/list.size();
+    static Double average(double sum, int length) {
+        return sum / length;
     }
 }
